@@ -1,15 +1,20 @@
+/** @format */
 
-import './App.css'
-import Login from './pages/public/Login'
+
+
+
+import "./App.css";
+
+
+import Register from "./pages/public/Register";
+
 
 function App() {
   return (
-    <>
-    <div>
-      <Login />
-    </div>
-    </>
-  )
+  <>
+  <Register/>
+  </>
+  );
 }
 
-export default App
+export default App;

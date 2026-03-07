@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-glass-white: rgba(255, 255, 255, 0.1);
+  --color-glass-gray: rgba(156, 163, 175, 0.05);
+}
+
+@layer components {
+  .glass-card {
+    @apply rounded-3xl border border-white/10 bg-glass-gray shadow-2xl backdrop-blur-xl;
+  }
+
+  .glass-input {
+    @apply w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 
+           text-white placeholder-gray-500 outline-none transition-all 
+           focus:border-white/30 focus:bg-white/10 focus:ring-1 focus:ring-white/20;
+  }
+
+  .glass-button {
+    @apply flex items-center justify-center rounded-xl bg-white/10 px-5 py-3 
+           text-sm font-semibold text-white transition-all 
+           hover:bg-white/20 active:scale-[0.98] border border-white/5;
+  }
+}

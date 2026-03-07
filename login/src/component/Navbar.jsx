@@ -1,13 +1,32 @@
-import { Link } from 'react-router-dom';
-import { LayoutDashboard, Settings, LogOut, User } from 'lucide-react';
+/** @format */
 
-export default function Navbar() {
- 
+import React from "react";
+import { Link } from "react-router-dom";
+
+const Navbar = () => {
   return (
-    <nav className="bg-white border-b sticky top-0 z-50">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link to="/" className="font-bold text-2xl text-blue-600">Logo</Link>
-        </div>
-    </nav>
+    <>
+      <nav className='fixedfixed top-0 left-0 right-0 z-50 flex items-center justify-center p-4'></nav>
+      <div className='glass-card flex w-full max-w-7xl items-center justify-between px-6 py-3 !rounded-2xl'></div>
+      <div className='hidden md:flex items-center gap-8'>
+        <Link
+          to='/dashboard'
+          className='text-sm font-medium text-gray-300 transition-colors hover:text-white'>
+          Dashboard
+        </Link>
+        <Link
+          to='/projects'
+          className='text-sm font-medium text-gray-300 transition-colors hover:text-white'>
+          Projects
+        </Link>
+        <Link
+          to='/team'
+          className='text-sm font-medium text-gray-300 transition-colors hover:text-white'>
+          Team
+        </Link>
+      </div>
+    </>
   );
-}
+};
+
+export default Navbar;
